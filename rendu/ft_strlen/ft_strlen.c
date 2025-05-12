@@ -1,11 +1,19 @@
-#include<unistd.h>
+#include <unistd.h>
 
-int	ft_strlen(*str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 		i++;
-	return (i);
+	return(i);
+}
+
+#include <stdio.h>
+int	main()
+{
+	char str[] = "petit";
+	printf("%d", ft_strlen(str));
+	return(0);
 }
